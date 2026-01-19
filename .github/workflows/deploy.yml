@@ -6,3 +6,21 @@ jobs:
     steps:
       - name: print hello
         run: echo "hello there"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v5
+      - name: download dependencies
+        run: npm ci
+      - name: test
+        run: npm test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v5
+      - name: download dependencies
+        run: npm ci
+      - name: build
+        run: npm run build
