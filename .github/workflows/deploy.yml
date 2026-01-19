@@ -34,7 +34,7 @@ jobs:
           path: dist
       - name: output file name
         id: publish
-        run: find dist/assets/*.js -f -execdir echo "script-file={}" >> $GITHUB_OUTPUT ';'
+        run: find dist/assets/*.js f -execdir echo "script-file={}" >> $GITHUB_OUTPUT ';'
   deploy:
     needs: build
     runs-on: ubuntu-latest
