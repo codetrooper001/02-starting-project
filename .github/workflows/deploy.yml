@@ -40,5 +40,5 @@ jobs:
           name: dist-files
       - name: print artifact files
         run: |
-          ls dist-files
+          ls
           echo "deploying"
